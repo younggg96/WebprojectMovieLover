@@ -1,0 +1,26 @@
+ion-img {
+  width: 100px;
+}
+
+.card {
+  background-color: #3a3a3a;
+  width: 100px;
+  margin: 10px;
+}
+
+.text {
+  text-align: center;
+  display: block;
+  color: #ffffff;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+//   border: #ffffff solid;
+}
+
+.text ion-text {
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+}

@@ -2,3 +2,20 @@
   max-height: 35vh;
   overflow: hidden;
 }
+
+ion-col ion-card {
+  height: 64px;
+  margin: 8px;
+  padding: 0;
+  background-color: #f5c525;
+  text-align: center;
+  font-size: large;
+  display: flex;
+}
+
+h1 ion-text {
+  // font: bolder 30px #ffffff;
+  // font-size: 18px;
+  font-weight: bolder;
+}
+

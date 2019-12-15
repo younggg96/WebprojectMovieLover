@@ -1,0 +1,6 @@
+<ion-card class="card" [button]="true" [routerLink]="['/tabs/Home', movie.id]" [queryParams]="{id: movie.id}">
+  <ion-card-content class="ion-no-padding">
+    <ion-img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}"></ion-img>
+  </ion-card-content>
+  <div class="text"><ion-text>{{movie.title}}</ion-text></div>
+</ion-card>

@@ -3,8 +3,18 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-};
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyAutDMqEjshJI_ekKfhTEeBQ8IbJc-9avA',
+    authDomain: 'movie-lover-c2497.firebaseapp.com',
+    databaseURL: 'https://movie-lover-c2497.firebaseio.com',
+    projectId: 'movie-lover-c2497',
+    storageBucket: 'movie-lover-c2497.appspot.com',
+    messagingSenderId: '666508708082',
+    appId: '1:666508708082:web:9ab57d840e504fef17686b',
+    measurementId: 'G-27S08S660X'
+  }
+ };
 
 /*
  * For easier debugging in development mode, you can import the following file

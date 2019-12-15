@@ -8,7 +8,7 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'Popular',
         children: [
           {
             path: '',
@@ -18,17 +18,21 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab2',
+        path: 'Home',
         children: [
           {
             path: '',
             loadChildren: () =>
               import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+          },
+          {
+            path: ':moiveId',
+            loadChildren: () => import('../movie-details/movie-details.module').then( m => m.MovieDetailsPageModule)
           }
         ]
       },
       {
-        path: 'tab3',
+        path: 'Top Movies',
         children: [
           {
             path: '',
@@ -39,20 +43,25 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/Home',
         pathMatch: 'full'
       }
     ]
   },
   {
+    path: 'movie-details',
+    loadChildren: () => import('../movie-details/movie-details.module').then( m => m.MovieDetailsPageModule)
+  },
+  {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/Home',
     pathMatch: 'full'
-  }
+  },
+
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class TabsPageRoutingModule {}
+export class TabsPageRoutingModule { }

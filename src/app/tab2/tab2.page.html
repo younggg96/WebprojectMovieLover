@@ -1,9 +1,56 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Two
-    </ion-title>
+  <ion-toolbar color="medium">
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="contact"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon slot="icon-only" name="more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-img class="ion-no-padding"
+    src="https://s3-us-west-2.amazonaws.com/flx-editorial-wordpress/wp-content/uploads/2017/08/30100643/RT_200EssentialMovies_600x314.jpg">
+  </ion-img>
+  <h2 class="ion-padding-horizontal"><strong>|</strong> Now Playing</h2>
+  <div class="thumnails">
+    <div class="list-thumbnail">
+      <div class="img-thumb" *ngFor="let video of playingMovies">
+        <app-movie-button [video]="video"></app-movie-button>
+      </div>
+    </div>
+  </div>
+  <h2 class="ion-padding-horizontal"><strong>|</strong> Trending</h2>
+  <div class="thumnails">
+    <div class="list-thumbnail">
+      <div class="img-thumb" *ngFor="let video of videos">
+        <app-movie-button [video]="video"></app-movie-button>
+      </div>
+    </div>
+    <div class="showtime">
+      <ion-text class="ion-padding text" color=primary>SHOWTIME & TICKETS</ion-text>
+    </div>
+  </div>
+  <h2 class="ion-padding-horizontal"><strong>|</strong> Up Coming Movies</h2>
+  <div class="thumnails">
+    <div class="list-thumbnail">
+      <div class="img-thumb" *ngFor="let video of upComingMovies">
+        <app-movie-button [video]="video"></app-movie-button>
+      </div>
+    </div>
+  </div>
+  <h2 class="ion-padding-horizontal"><strong>|</strong> Top Rated Movies</h2>
+  <div class="thumnails">
+    <div class="list-thumbnail">
+      <div class="img-thumb" *ngFor="let video of topMovies">
+        <app-movie-button [video]="video"></app-movie-button>
+      </div>
+    </div>
+  </div>
+</ion-content>
